@@ -1,0 +1,67 @@
+* {
+    margin: 0;
+    padding: 0;
+ }
+.TEC{
+    width: 100%;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.5)50%, rgba(0, 0, 0, 0.5)50%), url(Img/industry-2496192_1920.jpg);
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+ }
+ .TEC a{
+    text-decoration: none;
+    color: black;
+    font-weight: bolder;
+    margin: 5px; 
+ }
+ .form h1{
+    color: white;
+    font-weight: 500;
+    
+ }
+ .form{
+    text-align: center;
+    width: 440px;
+    height: 616px;
+    top: 50%;
+    background: #191919;;
+    position: absolute;
+    left:50%;
+    border-radius: 45px;
+    padding: 35px; 
+    transform: translate(-50%,-50%);
+ }
+ .form input{
+    width: 240px;
+    height: 35px;
+    background: transparent;
+    font-size: 15px;
+    letter-spacing: 1px;
+    margin-top: 12px;
+    font-family: sans-serif;
+    border: 2px solid #3498db;
+    padding: 14PX 10PX;
+    cursor: pointer;
+    color: white;
+ }
+ .form input::placeholder{
+    color: rgb(239, 243, 247);
+ }
+ .form input[type="submit"]
+ {
+    color: aliceblue;
+ }
+ .form label{
+    color: aliceblue;
+ }
+ .form input[type="submit"]
+ {
+    padding: 1px;
+    margin: 10px;
+    border-radius: 29px;
+ }
+ .form input[type="submit"]:hover
+ {
+ background: #000;;
+ }

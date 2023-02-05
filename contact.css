@@ -1,0 +1,131 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.main{
+    width: 100%;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.5)50%, rgba(0, 0, 0, 0.5)50%), url(Img/pexels-vinta-supply-co-_-nyc-842948.jpg);
+    background-position: center;
+    background-size: cover;
+    height: 100vh;  
+}
+.back a{
+ color:white;
+ font-size: 40px;
+}
+#sec{
+ display: flex;
+ align-items: center;
+ position:absolute;
+ top: 50%;
+ left: 50%;
+ transform: translate(-50%,-50%);
+}
+.social{
+ display: flex;
+ flex-direction: column;
+ background-color: #ffffff;
+ box-shadow:2px 2px 30px rgba(0, 0, 0, 0.1);
+
+}
+.social a{
+ padding: 20px;
+ text-decoration: none;
+ font-size: 30px;
+ color: #7b7c7c;
+}
+.social a:hover{
+ color: #000;
+}
+.box{
+  background-color: #434343;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 40px;
+  box-shadow:2px 2px 30px rgba(0, 0, 0, 0.1); 
+}
+.heading h1{
+ font-family:cursive;
+ color: #e7eef3 ;
+ font-size: 44px;
+ font-weight:lighter;
+ justify-content: center;
+}
+.heading p{
+ font-family:cursive;
+ color: #cecece;
+ font-size: 20px;
+ font-weight:lighter;
+ text-align: center;
+}
+
+.form{
+ margin: 15px 0px;
+ display: flex;
+ flex-direction: column;
+ justify-content: center;
+ align-items: center;
+}
+.form h1{
+ font-family: cursive;
+}
+
+.form input{
+ cursor: pointer;
+ width: 250px;
+ height: 45px;
+ background-color: transparent;
+ border: none;
+ border-bottom: 1px solid rgba(251,251,251,0.1);
+ outline: none;
+ margin: 10px 10px;
+ padding: 10px;
+ color: #f4f4f4;
+ display: flex;
+}
+.form textarea{
+ cursor: pointer;
+ width: 250px;
+ height: 200px;
+ outline: none;
+ background-color: rgba(0, 0, 0, 0.1);
+ border: 1px solid rgb(82,82,82,1);
+ color:#f4f4f4;
+ padding: 10PX;
+ font-size: 15px;
+}
+.form button{
+ cursor: pointer;
+ width: 200px;
+ height: 40PX;
+ background-color: #ffffff;
+ border: none;
+ outline: none;
+ margin-top: 20px;
+ border-radius: 10px;
+ box-shadow: 2px 2px 30px rgba(0, 0, 0, 0.1);
+ letter-spacing: 1px;
+}
+.form input:focus{
+ border-bottom: 1px solid rgb(255, 255, 255);
+ transition:0.5s;
+}
+.form textarea:focus{
+ border: none;
+ border-bottom: 1px solid rgb(255, 255, 255);
+ transition:0.5s;
+}
+.form button:active{
+ transform: scale(1.02);
+}
+.map{
+ filter: grayscale(0.2);
+ box-shadow: 2px 2px 30px rgba(0, 0, 0, 0.2);
+ border: 2px solid #ffffff;
+}
+.form ::placeholder{
+color:rgb(255, 255, 255);
+}

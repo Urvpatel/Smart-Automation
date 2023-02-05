@@ -1,0 +1,77 @@
+* {
+   margin: 0;
+   padding: 0;
+}
+.main{
+    width: 100%;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.5)50%, rgba(0, 0, 0, 0.5)50%), url(Img/WhatsApp\ Image\ 2023-01-26\ at\ 12.30.54\ PM.jpeg);
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+ }
+ 
+ .main a{
+    text-decoration: none;
+    color: rgb(242, 237, 237);
+    font-weight: bolder;
+    font-size:  40px;
+    margin: 3px;
+    padding: 5px;
+ }
+ .form h1{
+    font-family:cursive;
+    color: white;
+    font-weight: 500;   
+ }
+ .form{
+    text-align: center;
+    width: 354px;
+    height: 440px;
+    top: 48%;
+    background:#101010;
+    position: absolute;
+    left:81%;
+    border-radius: 45px;
+    padding: 35px; 
+    transform: translate(-50%,-50%);
+ }
+ .form input{
+    width: 265px;
+    height: 55px;
+    background: transparent;
+    font-size: 15px;
+    letter-spacing: 1px;
+    margin-top: 1px;
+    font-family: sans-serif;
+    border: 2px solid #a8e6ef;
+    padding: 14PX 10PX;
+    cursor: pointer;
+    color: white;
+    
+ }
+ .form input::placeholder{
+    color: rgb(239, 243, 247);
+ }
+ .form input[type="submit"]
+ {
+    color: aliceblue;
+ }
+ .form label{
+    color: aliceblue;
+ }
+ .form input[type="submit"]
+ {
+    text-align: center;
+    padding: 1px;
+    margin: 7px;
+    border-radius: 29px;
+    justify-content: center;
+ }
+ .form input[type="submit"]:hover
+ {
+ background:rgb(0, 2, 15);;
+ }
+ .main h4
+ {
+    color: #cecece;
+ }

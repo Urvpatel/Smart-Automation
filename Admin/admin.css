@@ -1,0 +1,81 @@
+* {
+    margin: 0;
+    padding: 0;
+ }
+.TEC{
+    width: 100%;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.5)50%, rgba(0, 0, 0, 0.5)50%), url(h1.jpeg);
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+ }
+ .TEC a{
+    text-decoration: none;
+    color: black;
+    font-weight: bolder;
+    margin: 5px;
+    font-size: 18;
+    
+ }
+ .form h1{
+    color: white;
+    font-weight: 500;
+    
+ }
+ .form{
+    text-align: center;
+    width: 350px;
+    height: 200px;
+    top: 50%;
+    background: #635959;;
+    position: absolute;
+    left:50%;
+    border-radius: 45px;
+    padding: 77px; 
+    transform: translate(-50%,-50%);
+ }
+ .form input{
+    width: 240px;
+    height: 35px;
+    background: transparent;
+    font-size: 15px;
+    letter-spacing: 1px;
+    margin-top: 12px;
+    font-family: sans-serif;
+    border: 2px solid orange;
+    padding: 14PX 10PX;
+    cursor: pointer;
+    color: white;
+ }
+ .form input::placeholder{
+    color: rgb(239, 243, 247);
+ }
+ .form input[type="submit"]
+ {
+    color: aliceblue;
+ }
+ .form label{
+    color: aliceblue;
+ }
+ .form input[type="submit"]
+ {
+    padding: 1px;
+    margin: 10px;
+    border-radius: 29px;
+ }
+ .form input[type="submit"]:hover
+ {
+ background: #000;;
+ }
+ .sgn{
+    width: 240px;
+    height: 40px;
+    background: orange;
+    border-bottom-left-radius: none;
+    margin-top: 30px;
+    font-size: 18px;
+    border-radius: 10px;
+    cursor: pointer;
+    color: rgb(27, 27, 28);
+    font-size: large;
+ }
