@@ -1,3 +1,6 @@
+<?php
+    require('navd.php');
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -24,13 +27,13 @@
 
 
                 <div class="menu">
-                    <ul>
+                    <!-- <ul>
                         <li><a href="#">RECENT PROJECTS</a></li>
                         <li><a href="#">PRODUCTS</a></li>
                         <li><a href="Urv.html">REGISTRATION</a></li>
                         <li><a href="login.html">LOGIN</a></li>
                         <li><a href="contact.html">CONTACT_US</a></li>
-                    </ul>
+                    </ul> -->
                 </div>
 
 
@@ -50,4 +53,7 @@
 
 </body>
 
+<?php
+    require('footer.php');
+?>
 </html>

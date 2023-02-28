@@ -1,0 +1,22 @@
+*{
+    margin: 0;
+    padding: 0;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    box-sizing: border-box;
+    font-family: "Popins" , sans-serif;
+}
+body{
+    background: rgb(238, 241, 221);
+}
+.card-body{
+    width: 95%;
+    height: 60px;
+    padding: 10px;
+    border-radius: 10px;
+    left: 10%;
+    margin-top: 1rem ;
+    background: #fff;
+    position: relative;
+}

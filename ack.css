@@ -1,16 +1,17 @@
-* {
-   margin: 0;
-   padding: 0;
+*{
+    margin : 0;
+    padding : 0;
 }
-.main{
+
+.main6{
     width: 100%;
-    background: linear-gradient(to top, rgba(0, 0, 0, 0.5)50%, rgba(0, 0, 0, 0.5)50%), url(WhatsApp\ Image\ 2023-01-26\ at\ 12.30.54\ PM.jpeg);
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.5)50%, rgba(0, 0, 0, 0.5)50%), url(WhatsApp\ Image\ 2023-01-26\ at\ 1.03.28\ PM.jpeg);
     background-position: center;
-    background-size: cover;
+     background-size: cover;
     height: 100vh;
  }
  
- .main a{
+ .main6 a{
     text-decoration: none;
     color: rgb(242, 237, 237);
     font-weight: bolder;
@@ -18,30 +19,29 @@
     margin: 3px;
     padding: 5px;
  }
- .form h1{
-    font-family:cursive;
+ .form6 h1{
     color: white;
     font-weight: 500;   
  }
- .form{
+ .form6{
     text-align: center;
-    width: 354px;
-    height: 440px;
+    width: 340px;
+    height: 540px;
     top: 48%;
     background:#101010;
     position: absolute;
-    left:81%;
-    border-radius: 45px;
+    left:50%;
+    border-radius: 25px;
     padding: 35px; 
     transform: translate(-50%,-50%);
  }
- .form input{
+ .form6 input{
     width: 265px;
-    height: 55px;
+    height: 37px;
     background: transparent;
     font-size: 15px;
     letter-spacing: 1px;
-    margin-top: 1px;
+    margin-top: 6px;
     font-family: sans-serif;
     border: 2px solid #a8e6ef;
     padding: 14PX 10PX;
@@ -49,17 +49,17 @@
     color: white;
     
  }
- .form input::placeholder{
+ .form6 input::placeholder{
     color: rgb(239, 243, 247);
  }
- .form input[type="submit"]
+ .form6 input[type="submit"]
  {
     color: aliceblue;
  }
- .form label{
+ .form6 label{
     color: aliceblue;
  }
- .form input[type="submit"]
+ .form6 input[type="submit"]
  {
     text-align: center;
     padding: 1px;
@@ -67,11 +67,12 @@
     border-radius: 29px;
     justify-content: center;
  }
- .form input[type="submit"]:hover
+ .form6 input[type="submit"]:hover
  {
  background:rgb(0, 2, 15);;
  }
- .main h4
+ .main6 tech_ack
  {
     color: #cecece;
  }
+ 

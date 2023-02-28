@@ -19,10 +19,10 @@
 
     <div class="TEC">
             <h2> 
-                <a href="home.html"><i class="fa-solid fa-house-chimney-user"></i></a>
+                <a href="home.php"><i class="fa-solid fa-house-chimney-user"></i></a>
             </h2>
         <div class="form">
-        <form method="post" action="h3.html">
+        <form method="post" action="tecreg.php">
                     <h1>Technician Registration</h1>
                     <input type="text" name="T_id" placeholder="Technician Id" required>
                     <br>
@@ -30,8 +30,17 @@
                     <input type="text" name="T_Address" placeholder="Address" required>
                     <br>
                     <input type="email" name="T_email" placeholder="Email" required>
+                    <!-- <div class="email">
+                   <input type="email" name="T_email"placeholder="Enter Email" id="contact-email" onkeyup="validateEmail()">
+                    <span id="email-error"></span>
+                    </div> -->
+
                     <input type="password" name="T_password" placeholder="Password"required><br>
-                    <input type="number" name="cn_no" placeholder="Contact_No" required>
+                    <input type="tel" name="cn_no" placeholder="123 456 7890" required>
+                    <!-- <div class="phone">
+                    <input type="tel" name="cn_no" placeholder="123 456 7890" id="contact-phone" onkeyup="validatePhone()">
+                    <span id="phone-error"> </span>
+                    </div> -->
                     
                     <input type="file" name="T_proof" placeholder="Identity_Proof" required>
                     <br>
@@ -42,6 +51,7 @@
                  </form>
         </div>
     </div>
+    <script src="script.js"></script>
 </body>
 
 </html>

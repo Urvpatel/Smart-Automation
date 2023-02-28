@@ -13,7 +13,7 @@
 
 <body>
 
-	<!-- for header part -->
+	
 	<header>
 
 		<div class="logosec">
@@ -21,15 +21,6 @@
 			<img src="https://media.geeksforgeeks.org/wp-content/uploads/20221210182541/Untitled-design-(30).png"
 				class="icn menuicn" id="menuicn" alt="menu-icon">
 		</div>
-
-		<div class="searchbar">
-			<input type="text" placeholder="Search">
-			<div class="searchbtn">
-				<img src="https://media.geeksforgeeks.org/wp-content/uploads/20221210180758/Untitled-design-(28).png"
-					class="icn srchicn" alt="search-icon">
-			</div>
-		</div>
-
 		<div class="message">
 			<div class="circle"></div>
 			<img src="https://media.geeksforgeeks.org/wp-content/uploads/20221210183322/8.png" class="icn" alt="">
@@ -45,49 +36,84 @@
 		<div class="navcontainer">
 			<nav class="nav">
 				<div class="nav-upper-options">
-					<div class="nav-option option1">
-						<img src="https://media.geeksforgeeks.org/wp-content/uploads/20221210182148/Untitled-design-(29).png"
-							class="nav-img" alt="dashboard">
+					<div class="nav-option option1">					
+							<class="nav-img" alt="dashboard">
 						<h3> Dashboard</h3>
 					</div>
 
 					<div class="option2 nav-option">
-						<img src="https://media.geeksforgeeks.org/wp-content/uploads/20221210183322/9.png"
+						<img src="https://media.geeksforgeeks.org/wp-content/uploads/20221210183320/4.png"
 							class="nav-img" alt="articles">
-						<h3> Articles</h3>
+						<a href="serbook_a.php">
+							<h3> Service Booking Details </h3>
+						</a>
 					</div>
 
 					<div class="nav-option option3">
 						<img src="https://media.geeksforgeeks.org/wp-content/uploads/20221210183320/5.png"
 							class="nav-img" alt="report">
-						<h3> Report</h3>
+						<a href="clnt_ack_a.php">
+							<h3> Report</h3>
+						</a>
 					</div>
 
 					<div class="nav-option option4">
 						<img src="https://media.geeksforgeeks.org/wp-content/uploads/20221210183321/6.png"
 							class="nav-img" alt="institution">
-						<h3> Institution</h3>
+						<a href="client_a.php">
+							<h3> Client</h3>
+						</a>
+
 					</div>
 
 					<div class="nav-option option5">
 						<img src="https://media.geeksforgeeks.org/wp-content/uploads/20221210183323/10.png"
 							class="nav-img" alt="blog">
-						<h3> Profile</h3>
+						<a href="tech_a.php">
+							<h3> Technician </h3>
+						</a>
 					</div>
 
 					<div class="nav-option option6">
 						<img src="https://media.geeksforgeeks.org/wp-content/uploads/20221210183320/4.png"
 							class="nav-img" alt="settings">
-						<h3> Settings</h3>
+							<a href="#">
+						<h3> Products </h3>
 					</div>
 
 					<div class="nav-option logout">
 						<img src="https://media.geeksforgeeks.org/wp-content/uploads/20221210183321/7.png"
 							class="nav-img" alt="logout">
+							<a href="logout.php">
 						<h3>Logout</h3>
 					</div>
 
 				</div>
 			</nav>
 		</div>
-		
+			</div>
+		</div>
+	</div>
+
+	<script src="./index.js"></script>
+</body>
+
+</html>
+	 <?php 
+		$con = mysqli_connect('localhost','root','');
+		mysqli_select_db($con,'demo');
+		 $sql=mysqli_query($con," SELECT * from service_book ");
+		 
+	 ?>
+						<?php while($row=mysqli_fetch_array($sql)) { ?>
+									
+									
+												<td><?php echo $row['U_name'];?></td>
+												<td><?php echo $row['Confirm Address'];?></td>
+												<td><?php echo $row['Issue text'];?></td>
+												<td><?php echo $row['dt_book'];?></td>
+												
+											   </td>
+											</tr>
+											<?php } ?> 
+										

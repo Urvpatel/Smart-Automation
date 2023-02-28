@@ -1,0 +1,118 @@
+
+
+*{
+    margin: 0;
+    padding: 0;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    box-sizing: border-box;
+    font-family: "Popins" , sans-serif;
+}
+body{
+    background: rgb(238, 241, 221);
+}
+nav{
+    position: sticky;
+    top: 0;
+    bottom: 0;
+    height: 100vh;
+    left: 0;
+    width: 100px;
+    background: rgb(245, 242, 242);
+    overflow: hidden;
+    transition: 1s;
+}
+nav:hover{
+    width: 300px;
+    transition: 1s;
+}
+.logo{
+    text-align: center;
+    display: flex;
+    margin: 10px 0 0 10px;
+    font-size: larger;
+    padding-bottom: 3rem;
+}
+.logo img{
+    width: 80px;
+    height: 80px;
+    border-radius: 40%;
+}
+.logo span{
+    font-weight: bold;
+    padding-left: 15px;
+    text-transform: uppercase;
+}
+a{
+   position: relative;
+    width: 250px;
+    font-size: 15px;
+    color: rgb(85, 74, 74);
+    display: table;
+    padding: 10px;
+}
+.nav-item{
+    position: relative;
+    top: 12px;
+    margin-left: 10px;
+}
+nav .fas{
+    position: relative;
+    width: 80px;
+    height: 30px;
+    top: 20px;
+    font-size: 20px;
+    text-align: center;
+}*/
+a:hover{
+    background: rgb(117, 116, 116);
+}
+a:hover i{
+    color: #000;
+    transition: 0.5s;
+}
+
+
+
+.container{
+    display: flex;
+}
+
+
+/* Main Section */
+.main{
+    position: relative;
+    padding: 20px;
+    width: 100%;
+}
+.main-top{
+    display: flex;
+    width: 100%;
+}
+.main-top i{
+    position: fixed;
+    right: 0;
+    margin: 10px, 30px;
+    color: rgb(238, 244, 206);
+    cursor: pointer;
+}
+
+/* Main Body */
+.main-body{
+    display: flex;
+}
+.main-content{
+    position: relative;
+    width: 75%;
+}
+
+.table-stats order-table ov-h{
+    width: 95%;
+    height: 40px;
+    padding: 10px;
+    border-radius: 10px;
+    margin-top: 1.3rem ;
+    background: rgb(238, 241, 221);
+    position: relative;
+}

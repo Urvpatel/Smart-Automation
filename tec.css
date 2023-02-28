@@ -4,7 +4,7 @@
  }
 .TEC{
     width: 100%;
-    background: linear-gradient(to top, rgba(0, 0, 0, 0.5)50%, rgba(0, 0, 0, 0.5)50%), url(Img/industry-2496192_1920.jpg);
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.5)50%, rgba(0, 0, 0, 0.5)50%), url(industry-2496192_1920.jpg);
     background-position: center;
     background-size: cover;
     height: 100vh;
@@ -25,7 +25,7 @@
     width: 440px;
     height: 616px;
     top: 50%;
-    background: #191919;;
+    background: #f0efef;;
     position: absolute;
     left:50%;
     border-radius: 45px;
@@ -64,4 +64,7 @@
  .form input[type="submit"]:hover
  {
  background: #000;;
+ }
+ #phone-error{
+   color: red;
  }

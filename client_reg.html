@@ -2,27 +2,27 @@
 <html lang="en">
 
 <head>
-    <link rel="stylesheet" href="client_reg.css">
+    <link rel="stylesheet" href="tec.css">
     <script src="https://kit.fontawesome.com/184bf0ce5d.js" crossorigin="anonymous"></script>
     <title>SIGN UP</title>
 </head>
 <body>
 
     <div class="main">
-            <a href="home.html"><i class="fa-solid fa-house-chimney-user"></i></a>
+            <a href="home.php"><i class="fa-solid fa-house-chimney-user"></i></a>
         <div class="form">
-        <form method="post" action="c_reg.php">
+        <form method="post" action="client_reg.php">
                     <h1>Sign Up Here</h1>
-                    <input type="text" name="F_Name_C" placeholder="First Name" required>
+                    <input type="text" name="F_name" placeholder="First Name" required>
                     <br>
-                    <input type="text" name="L_Name_C" placeholder="Last Name" required>
+                    <input type="text" name="L_name" placeholder="Last Name" required>
                     <br>    
                     <input type="text" name="Username" placeholder="Username" required>
                     <br>
-                    <input type="text" name="Address_C" placeholder="Address" required>
+                    <input type="text" name="Address_1" placeholder="Address" required>
                     <br>
-                    <input type="email" name="Email_C" placeholder="Email" required>
-                    <input type="password" name="Password_C" placeholder="Password" required>
+                    <input type="email" name="Email" placeholder="Email" required>
+                    <input type="password" name="Password" placeholder="Password" required>
                     <br>
                            <label style="
                            position: relative;
@@ -32,16 +32,16 @@
                            position: relative;
                            left: 93px;">Male</label>
                            
-                           <input type="radio" name="Gender_C" id="malerd" value="Male"required> 
+                           <input type="radio" name="Gender" id="malerd" value="Male"required> 
                           
                           <label style="
                            position: relative;
                            bottom: -27px;
                            right: 188px;">Female</label>
                            
-                           <input type="radio" name="Gender_C" id="femalerd" value="Female"required>
+                           <input type="radio" name="Gender" id="femalerd" value="Female"required>
                     <br>
-                    <input type="text" name="Cont_C" placeholder="Contact Number" required>
+                    <input type="text" name="Phn_no" placeholder="Contact Number" required>
                     <br>
                     <br>
                     <input type="submit">

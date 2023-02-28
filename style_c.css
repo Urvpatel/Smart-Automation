@@ -1,0 +1,62 @@
+.card {
+    height: 600px;
+    width: 1200px;
+    margin: -380px auto 0px auto;
+    background-color: #ffffff;
+    margin-left: 250px;
+    border-radius: 30px;
+    box-shadow: 3px 3px 10px rgb(188, 188, 188);
+    padding: 0px 20px 20px 20px;
+    }
+    /*.card-body {
+        height: 80px;
+        width: 98%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 20px 20px 10px 20px;
+        border-bottom: 2px solid rgba(0, 20, 151, 0.59);
+    }*/
+
+    .card-body {
+        max-width: 1160px;
+        overflow-x: auto;
+        padding: 20px;
+        }
+        .report-topic-heading,
+        .item1 {
+        width: 1120px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        }
+    .table{
+        display: table;
+        border-collapse: separate;
+        box-sizing: border-box;
+        text-indent: initial;
+        white-space: normal;
+        line-height: normal;
+        font-weight: normal;
+        font-size: large;
+        font-style: normal;
+        color: -internal-quirk-inherit;
+        text-align: start;
+        border-spacing: 4px;
+        border-color: rgb(30, 28, 28);
+        font-variant: normal;
+    }
+        
+        .box-title {
+        font-size: 37px;
+        font-weight: 600;
+        color: #5500cb;
+        }
+        
+        .table-stats order-table ov-h{
+            padding: 20px;
+            width: 30%;
+            left: 50px;
+        }
+
+        
