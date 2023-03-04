@@ -5,7 +5,6 @@ function validate()
     if(Name=="xyz" && password==123)
     {
         alert("Login Succesfull");
-        window.location=d.html;
         return false;
     }
     else{

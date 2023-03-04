@@ -26,7 +26,7 @@ h1{
   top: 100px;
   font-size: 50px;
 }
-.Client {
+.Admin {
   height: 400px;
   width: 400px;
   position: relative;
@@ -40,7 +40,7 @@ h1{
   left: 897px;
   bottom: 196px;
 }
-.Client img{
+.Admin img{
   height: 400px;
   width: 400px;
 }
@@ -48,7 +48,7 @@ h1{
   height: 400px;
   width: 400px;
 }
-.Client a{
+.Admin a{
   height: 400px;
   width: 400px;
 }

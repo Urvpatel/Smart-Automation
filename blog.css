@@ -1,8 +1,8 @@
 .blogs .box-container
 {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
-    gap: 1.5rem;
+    grid-template-columns: repeat(auto-fit, minmax(56rem, 58fr));
+    gap: 8.5rem;
     background-color: #404040;
 }
 

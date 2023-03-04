@@ -12,8 +12,7 @@
         
         <div class="TEC">
             
-<div class="form" 
->
+<div class="form">
 <form method="post" action="demo_a.php">
     <h2>ADMIN LOGIN PANEL</h2>
     <br>

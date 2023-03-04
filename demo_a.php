@@ -44,7 +44,7 @@
 					<div class="option2 nav-option">
 						<img src="https://media.geeksforgeeks.org/wp-content/uploads/20221210183320/4.png"
 							class="nav-img" alt="articles">
-						<a href="serbook_a.php">
+						<a href="servicebooka.php">
 							<h3> Service Booking Details </h3>
 						</a>
 					</div>
@@ -95,25 +95,7 @@
 		</div>
 	</div>
 
-	<script src="./index.js"></script>
 </body>
 
 </html>
-	 <?php 
-		$con = mysqli_connect('localhost','root','');
-		mysqli_select_db($con,'demo');
-		 $sql=mysqli_query($con," SELECT * from service_book ");
-		 
-	 ?>
-						<?php while($row=mysqli_fetch_array($sql)) { ?>
-									
-									
-												<td><?php echo $row['U_name'];?></td>
-												<td><?php echo $row['Confirm Address'];?></td>
-												<td><?php echo $row['Issue text'];?></td>
-												<td><?php echo $row['dt_book'];?></td>
-												
-											   </td>
-											</tr>
-											<?php } ?> 
-										
+	
