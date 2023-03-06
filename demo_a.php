@@ -77,7 +77,7 @@
 					<div class="nav-option option6">
 						<img src="https://media.geeksforgeeks.org/wp-content/uploads/20221210183320/4.png"
 							class="nav-img" alt="settings">
-							<a href="#">
+							<a href="taken/shopping cart/shopping cart/admin.php">
 						<h3> Products </h3>
 					</div>
 
@@ -98,4 +98,6 @@
 </body>
 
 </html>
-	
+<?php 
+require("sess1.php");
+?>

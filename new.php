@@ -40,7 +40,7 @@
                         <li><a href="#">Home</a></li>
                         <li><a href="">About</a></li>
                         <li><a href="#">Recent Projects</a></li>
-                        <li><a href="#">services</a></li>
+                        <li><a href="taken/shopping cart/shopping cart/cart.php">Product</a></li>
                         <li><a href="#">contact</a></li>
                     </ul>
                 </div><!-- /.navbar-collapse -->
@@ -106,5 +106,5 @@
 </body>
 </html>
 <?php
-    require('footer.php');
+    require('foot.php');
 ?>
