@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <!--Code by Divinector (www.divinectorweb.com)-->
 <html lang="en">
@@ -17,13 +16,71 @@
 
     <header>
         <div class="wrapper">
-            <div class ="logo">
-                <img src="1.png" height="126px">
-            </div>
-        <nav class="navbar navbar-default navbar-fixed-top navbar-inverse">
-            <div class="container">
-                <!-- Brand and toggle get grouped for better mobile display -->
-                <div class="navbar-header">
+        <html lang="en">
+     <nav>
+        <ul>
+        <img src="1.png" height="71px">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <li><a href="slid.html">Recent Projects</a></li>
+          <li><a href="new changes/productsbb.php">Products</a></li>
+          <li><a href="client_registration.html">Registration</a></li>
+          <!-- <li><a href="login.html">Log-in</a></li> -->
+          <li><a href="contact.html">Contact</a></li>
+                         <?php
+                         session_start();
+                          if (isset($_SESSION['USER_LOGIN'])) {
+                              echo  $_SESSION['Username'].'<a href="Logout.php">Logout</a> <a href="login.html">Order</a>';
+                        } else {
+                              echo '<a href="login.html"><i class="icon-user icons">Login</i></a>';         
+                    }
+                    ?>
+        </ul>
+    
+        </div>
+      </nav>
+      
+      <style>
+        nav {
+          position: fixed;
+          top: 0;
+          left: 0;
+          width: 100%;
+          background-color: white;
+          box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+          z-index: 999;
+        }
+
+        .logo {
+            left: 20px;
+        }
+      
+        ul {
+          list-style-type: none;
+          margin: 0;
+          padding: 0;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          height: 90px;
+        }
+      
+        li {
+          margin: 0 20px;
+        }
+      
+        a {
+          text-decoration: none;
+          color: black;
+          font-weight: bold;
+        }
+      </style> 
+      
+
+            <!-- <nav class="navbar navbar-default navbar-fixed-top navbar-inverse">
+                <div class="container">
+                     Brand and toggle get grouped for better mobile display -->
+
+
+                <!-- <div class="navbar-header">
                     <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
                         <span class="sr-only">Toggle navigation</span>
                         <span class="icon-bar"></span>
@@ -31,22 +88,22 @@
                         <span class="icon-bar"></span>
                     </button>
                     <a class="navbar-brand" href="#">SMART AUTOMATION</a>
-                </div>
+                </div>  -->
 
                 <!-- Collect the nav links, forms, and other content for toggling -->
-                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <!-- <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 
                     <ul class="nav navbar-nav navbar-right">
                         <li><a href="#">Home</a></li>
-                        <li><a href="">About</a></li>
+                        <li><a href="login.html">Log-in</a></li>
                         <li><a href="#">Recent Projects</a></li>
-                        <li><a href="taken/shopping cart/shopping cart/cart.php">Product</a></li>
-                        <li><a href="#">contact</a></li>
-                    </ul>
+                        <li><a href="#">services</a></li>
+                        <li><a href="contact.html">contact</a></li>
+                        <li>
+                    </ul> -->
                 </div><!-- /.navbar-collapse -->
             </div><!-- /.container-fluid -->
-        </nav>
-
+        </nav>  
 
         <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
             <!-- Indicators -->
@@ -101,10 +158,13 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <?php
     require('blog.php');
-?>
+    ?>
+    <?php
+    require('bs.html');
+    ?>
 
 </body>
 </html>
 <?php
-    require('foot.php');
+    require('foot.html');
 ?>

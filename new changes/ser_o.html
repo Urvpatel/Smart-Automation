@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+    <head>
+        <meta charset="UTF-8" />
+    <!-- <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /> -->
+    <title>Document</title>
+    <link rel="stylesheet" href="ser.css" />
+
+    <script> 
+    
+        function Field1() {
+            // Get the window object of the other page
+            var otherWindow = window.open('service.html', '_blank');
+        
+            // Wait for the other page to load
+            otherWindow.onload = function() {
+                // Get the text field on the other page
+                var textField = otherWindow.document.getElementById('textfield');
+        
+                // Set the value of the text field
+                textField.value = 'CCTV installation'; 
+            };
+        }
+        function Field2() {
+            // Get the window object of the other page
+            var otherWindow = window.open('service.html', '_blank');
+        
+            // Wait for the other page to load
+            otherWindow.onload = function() {
+                // Get the text field on the other page
+                var textField = otherWindow.document.getElementById('textfield');
+        
+                // Set the value of the text field
+                textField.value = 'keypad installation'; 
+            };
+        }
+        function Field3() {
+            // Get the window object of the other page
+            var otherWindow = window.open('service.html', '_blank');
+        
+            // Wait for the other page to load
+            otherWindow.onload = function() {
+                // Get the text field on the other page
+                var textField = otherWindow.document.getElementById('textfield');
+        
+                // Set the value of the text field
+                textField.value = 'Repairing'; 
+            };
+        }
+        </script>
+    </head>
+    <body>
+
+        <div class="service">
+            <div class="title">
+                <h2> <i> BEST_SELLER </i> </h2>
+            </div>
+
+        <!-- blogs section starts -->
+        <section class="blogs" id="blogs">
+            <!-- <h1 class= "heading"> our blogs </h1> -->
+            <div class="box-container">
+                
+                <div class="box">
+                    <div class="image">
+                        <img src="cctv.jpeg"">
+                    </div>
+                    <h1> Security </h1>
+                    <div class="content">           
+                       <!-- /* <p>SmartAutomation provides various options of Home Theatre system to clients based on the requirement and budget which is seamlessly integrated to the automation system.  -->
+                            <!-- We offer Home theater solutions starting from right acoustics, best combination of systems and sound systems which suits the dimensions of the room </p>*/ -->
+                            <!-- <button onclick="window.location.href='service.html';"style="background-color: #555; color: white; padding: 10px 20px; border: none; border-radius: 4px;">Book Service!</button> -->
+                            <!-- <button onclick="updateTextField()">Click me</button> -->
+                            <button onclick="window.location.href='Security.html';"style="background-color: #555; color: white; padding: 10px 20px; border: none; border-radius: 4px;">Buy Product!</button>
+                        </div>
+                </div>
+                
+                <div class="box">
+                    <div class="image">
+                        <img src="keypad.png" alt="">
+                    </div>
+                    <h1> Auto </h1>
+                    <div class="content">                      
+                        <!-- <p>Make the home respond to your need. HomeAutomat allows you to create the lighting or scenes based on the mood.  -->
+                            <!-- SmartAutomation provides you Lightings, Weather, Music… that welcomes you, says Good Night, Serene Atmosphere, Rocks you or the one that you need.</p> -->
+                            
+                            
+                        
+                        <!-- <button onclick="window.location.href='service.html';"style="background-color: #555; color: white; padding: 10px 20px; border: none; border-radius: 4px;">Book Service!</button> -->
+                        <button onclick="window.location.href='auto.html';"style="background-color: #555; color: white; padding: 10px 20px; border: none; border-radius: 4px;">Buy Product!</button>
+                    </div>
+                </div>
+                
+                <div class="box">
+                    <div class="image">
+                        <img src="fd.jpeg" alt="">
+                    </div>
+                    <h1> Fire Detection </h1>
+                    <div class="content">
+                        <!-- <button onclick="window.location.href='service.html';"style="background-color: #555; color: white; padding: 10px 20px; border: none; border-radius: 4px;">Book Service!</button> -->
+                        <!-- <p> SmartAutomation allows you to create the Home atmosphere, as if you are at home while actually you are out on a Vacation. The " Video Surveillance System " allows you to have a watch as you desire.  -->
+                            <!-- The automated alerts on SMS/Alarms/Push Notifications can keep you in touch with the home for better safety.</p> -->
+                            <button onclick="window.location.href='Fire.html';"style="background-color: #555; color: white; padding: 10px 20px; border: none; border-radius: 4px;">Buy Product!</button>
+                    </div>
+                </div>
+
+                <div class="box">
+                    <div class="image">
+                        <img src="solar.jpeg" alt="">
+                    </div>
+                    <h1> Solar </h1>
+                    <div class="content">   
+                        <button onclick="window.location.href='Solar.html';"style="background-color: #555; color: white; padding: 10px 20px; border: none; border-radius: 4px;">Buy Product!</button>
+        
+                        <!-- <p>Experience the automated home through the multiple sensors which can be programmed to turn ON the relevant lights and electrical devices or scenes based on various conditions like time or light intensity  -->
+                        <!-- or based on the movement or occupancy of the Human. The sensitivity of the Sensors can be adjusted to ignore the movement of the small animals. </p> -->
+                        <!-- <a href="#" class="btn"> read-more </a> -->
+                        
+                    </div>
+                </div>
+
+                
+                
+                   
+
+            </div>
+        </section>      
+    </body>
+</html>

@@ -9,7 +9,7 @@ $Cost=$_POST["Cost"];
 $con = mysqli_connect('localhost','root',);
  mysqli_select_db($con,'demo');
 $query= " INSERT INTO `clnt`(`T_id`, `Service_Id`, `Service_date`, `Feedback`, `Cost`) VALUES 
-('T_id','$Service_Id','$Service_date','$Feedback','$Cost')";
+('$T_id','$Service_Id','$Service_date','$Feedback','$Cost')";
 $result= mysqli_query($con,$query);
 if ($result===TRUE)
 {

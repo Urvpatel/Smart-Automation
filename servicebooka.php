@@ -1,11 +1,12 @@
 
 <?php
+// require('demo_a.php');
 $conn = mysqli_connect('localhost','root','','demo');
 
 
-if(isset($_POST['dt_book'])){
+if(isset($_POST['add_product'])){
 
-    $id=$_POST["id"];
+
     $U_name=$_POST["U_name"];
     $Confirm_Address=$_POST["Confirm_Address"];
     $Issue_text=$_POST["Issue_text"];
@@ -25,23 +26,14 @@ if(isset($_POST['dt_book'])){
       }
    }
 
-      $id = $_GET['id'];
-   $delete = "DELETE FROM service_book WHERE id ='$id'";
-   mysqli_query($conn, $delete);
-   header('location:servicebooka.php');
-      // $id = ( $_GET['id']);
-      // $delete = "DELETE FROM service_book WHERE id = '$id'";
-      // mysqli_query($conn, $delete);
-   
 };
 
-// if(isset($_GET['delete'])){
-//    $id = $_GET['id'];
-//    $delete = "DELETE FROM service_book WHERE id = $id";
-//    mysqli_query($conn, $delete);
-//    header('location:servicebooka.php');
-// };
-
+if(isset($_GET['delete'])){
+    $id = $_GET['delete'];
+    mysqli_query($conn, "DELETE FROM service_book WHERE id = $id");
+    header('location:servicebooka.php');
+ };
+ 
 ?>
 
 <!DOCTYPE html>
@@ -56,7 +48,7 @@ if(isset($_POST['dt_book'])){
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 
    <!-- custom css file link  -->
-   <link rel="stylesheet" href="stylepn.css">
+   <link rel="stylesheet" href="admin.css">
 
 </head>
 <body>
@@ -95,7 +87,6 @@ if(isset($message)){
       <table class="product-display-table">
          <thead>
          <tr>
-                                        <th> Sr. no </th>
                                         <th> User Name  </th>
                                         <th> Confirm Address </th>
                                         <th> Product issue </th>
@@ -108,14 +99,13 @@ if(isset($message)){
             <!-- <td><?php echo $row['name']; ?></td>
             <td>$<?php echo $row['price']; ?>/-</td>
             <td><?php echo $row['quantity']; ?></td> -->
-                                             <td><?php echo $row['id'];?> &nbsp; </td>
                                             <td><?php echo $row['U_name'];?> &nbsp; </td>
                                             <td><?php echo $row['Confirm_Address'];?> &nbsp;</td>
                                             <td><?php echo $row['Issue_text'];?> &nbsp; </td>
                                             <td><?php echo $row['dt_book'];?> &nbsp; </td>
             <td>
                <!-- <a href="admin_update.php?edit=<?php echo $row['Username']; ?>" class="btn"> <i class="fas fa-edit"></i> edit </a> -->
-               <a href="servicebooka.php?type=delete=<?php echo $row['id']; ?>" class="btn"> <i class="fas fa-trash"></i> delete </a>
+               <a href="servicebooka.php?delete=<?php echo $row['id']; ?>" class="btn"> <i class="fas fa-trash"></i> delete </a>
             </td>
          </tr>
       <?php } ?>

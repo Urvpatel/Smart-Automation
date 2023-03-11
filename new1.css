@@ -14,10 +14,14 @@ header .carousel-inner .item {
 
 	text-decoration: none;
 }
+img {
+	top:20px;
+}
 
 .navbar-inverse {
-	background-color: transparent;
-	border-color: transparent;
+
+	background-color: white ;
+	border-color: white;
 }
 .navbar-inverse .navbar-brand {
 	color: #131111;
@@ -26,6 +30,7 @@ header .carousel-inner .item {
 	font-weight: 900;
 }
 .nav.navbar-nav.navbar-right {
+	color: black;
 	margin: 25px 0;
 }
 .navbar-inverse .navbar-nav>li>a {
@@ -40,7 +45,7 @@ header .carousel-inner .item {
 	height: 100vh;
 }
 .carousel-caption {
-	padding-bottom: 250px;
+	padding-bottom: 100px;
 	font-family:poppins;
 }
 .carousel-caption h2 {

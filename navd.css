@@ -6,7 +6,7 @@
     font-family: Arial;
 }
 body{
-    background: url(bg.jpg);
+ 
     background-size: cover;
     height: 100vh;
     background-position: center;
@@ -20,7 +20,7 @@ header{
     position: fixed;
     z-index: 99;
     box-shadow: 0 0 10px #000;
-    background: linear-gradient(to top, rgba(0, 0, 0, 0.5)50%, rgba(0, 0, 0, 0.5)50%);
+    background: #53331f;
 }
 #chk1{
     display: none;

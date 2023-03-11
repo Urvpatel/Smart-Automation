@@ -1,95 +1,306 @@
-<?php
-
-@include 'config.php';
-
-if(isset($_POST['add_to_cart'])){
-
-   $product_name = $_POST['product_name'];
-   $product_price = $_POST['product_price'];
-   $product_image = $_POST['product_image'];
-   $product_quantity = 1;
-
-   $select_cart = mysqli_query($conn, "SELECT * FROM `cart` WHERE name = '$product_name'");
-
-   if(mysqli_num_rows($select_cart) > 0){
-      $message[] = 'product already added to cart';
-   }else{
-      $insert_product = mysqli_query($conn, "INSERT INTO `cart`(name, price, image, quantity) VALUES('$product_name', '$product_price', '$product_image', '$product_quantity')");
-      $message[] = 'product added to cart succesfully';
-   }
-
-}
-
-?>
-
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-   <meta charset="UTF-8">
-   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>products</title>
-
-   <!-- font awesome cdn link  -->
-   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-
-   <!-- custom css file link  -->
-   <link rel="stylesheet" href="css/style.css">
+	<title>Product Page</title>
+	<link rel="stylesheet" type="text/css" href="style1.css">
+	
+   
+  
 </head>
 <body>
-   
-<?php
+  <style>
+    nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background-color: black;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+      z-index: 999;
+    }
 
-if(isset($message)){
-   foreach($message as $message){
-      echo '<div class="message"><span>'.$message.'</span> <i class="fas fa-times" onclick="this.parentElement.style.display = `none`;"></i> </div>';
-   };
-};
+    .logo {
+        left: 20px;
+    }
+  
+    ul {
+      list-style-type: none;
+	  background-color: black;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 90px;
+    }
+  
+    li {
+      margin: 0 20px;
+    }
+  
+    a {
+      text-decoration: none;
+      color: white;
+      font-weight: bold;
+    }
+  </style>
 
-?>
+<nav>
+        <ul>
+        <!-- <img src="lv.png" height="100px">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -->
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+        <!-- <li><a href="#">Recent Projects</a></li> -->
+          <!-- <li><a href="products.php">Products</a></li> -->
+		  <li><a href="new.php">Home</a></li>
+		  <li><a href="slid.html">Recent Projects</a></li>
+		  <li><a href="client_registration.html">Registration</a></li>
+          <li><a href="login.html">Log-in</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+		</nav>
+		<header><h1> <i> PRODUCTS </i></h1></header>
 
-<?php include 'header.php'; ?>
+	<!--  -->
+	<!--  -->
+	<h2 class="blog-sidebar-title"></h2>
+	<hr />
 
-<div class="container">
+	<!-- <a href="auto.html" >Auto</a>
+	<a href="AVI.html"><p class="blog-sidebar-list" ><b> <span class="list-icon"></span> Audio</b></p></a>
+	<a href="Security.html"><p class="blog-sidebar-list"><b><span class="list-icon"></span> Security</b></p></a>
+	<a href="Solar.html"><p class="blog-sidebar-list"><b><span class="list-icon"></span> Solar</b></p></a>
+	<a href="AC.html"><p class="blog-sidebar-list"><b><span class="list-icon"></span> Access Control</b></p></a>
+    
+	<div>&nbsp;</div>
+					<div>&nbsp;</div>
+				 -->
+<!-- <div class="report-container">
+				<div class="report-header">
+					<h1 class="recent-Articles">Recent Articles</h1>
+					<button class="view">View All</button>
+				</div>
 
-<section class="products">
+				<div class="report-body">
+					<div class="report-topic-heading">
+						<h3 class="t-op">Article</h3>
+						<h3 class="t-op">Views</h3>
+						<h3 class="t-op">Comments</h3>
+						<h3 class="t-op">Status</h3>
+					</div>
 
-   <h1 class="heading">latest products</h1>
+					<div class="items">
+						<div class="item1">
+							<h3 class="t-op-nextlvl">Article 73</h3>
+							<h3 class="t-op-nextlvl">2.9k</h3>
+							<h3 class="t-op-nextlvl">210</h3>
+							<h3 class="t-op-nextlvl lavel-tag">Published</h3>
+						</div>
 
-   <div class="box-container">
+						<div class="item1">
+							<h3 class="t-op-nextlvl">Article 72</h3>
+							<h3 class="t-op-nextlvl">1.5k</h3>
+							<h3 class="t-op-nextlvl">360</h3>
+							<h3 class="t-op-nextlvl lavel-tag">Published</h3>
+						</div>
 
-      <?php
-      
-      $select_products = mysqli_query($conn, "SELECT * FROM `product`");
-      if(mysqli_num_rows($select_products) > 0){
-         while($fetch_product = mysqli_fetch_assoc($select_products)){
-      ?>
+						<div class="item1">
+							<h3 class="t-op-nextlvl">Article 71</h3>
+							<h3 class="t-op-nextlvl">1.1k</h3>
+							<h3 class="t-op-nextlvl">150</h3>
+							<h3 class="t-op-nextlvl lavel-tag">Published</h3>
+						</div>
 
-      <form action="" method="post">
-         <div class="box">
-            <img src="uploaded_img/<?php echo $fetch_product['image']; ?>" alt="">
-            <h3><?php echo $fetch_product['name']; ?></h3>
-            <div class="price">Rs<?php echo $fetch_product['price']; ?>/-</div>
-            <input type="hidden" name="product_name" value="<?php echo $fetch_product['name']; ?>">
-            <input type="hidden" name="product_price" value="<?php echo $fetch_product['price']; ?>">
-            <input type="hidden" name="product_image" value="<?php echo $fetch_product['image']; ?>">
-            <input type="submit" class="btn" value="add to cart" name="add_to_cart">
-         </div>
-      </form>
+						<div class="item1">
+							<h3 class="t-op-nextlvl">Article 70</h3>
+							<h3 class="t-op-nextlvl">1.2k</h3>
+							<h3 class="t-op-nextlvl">420</h3>
+							<h3 class="t-op-nextlvl lavel-tag">Published</h3>
+						</div>
 
-      <?php
-         };
-      };
-      ?>
+						<div class="item1">
+							<h3 class="t-op-nextlvl">Article 69</h3>
+							<h3 class="t-op-nextlvl">2.6k</h3>
+							<h3 class="t-op-nextlvl">190</h3>
+							<h3 class="t-op-nextlvl lavel-tag">Published</h3>
+						</div>
 
-   </div>
+						<div class="item1">
+							<h3 class="t-op-nextlvl">Article 68</h3>
+							<h3 class="t-op-nextlvl">1.9k</h3>
+							<h3 class="t-op-nextlvl">390</h3>
+							<h3 class="t-op-nextlvl lavel-tag">Published</h3>
+						</div>
 
-</section>
+						<div class="item1">
+							<h3 class="t-op-nextlvl">Article 67</h3>
+							<h3 class="t-op-nextlvl">1.2k</h3>
+							<h3 class="t-op-nextlvl">580</h3>
+							<h3 class="t-op-nextlvl lavel-tag">Published</h3>
+						</div>
 
+						<div class="item1">
+							<h3 class="t-op-nextlvl">Article 66</h3>
+							<h3 class="t-op-nextlvl">3.6k</h3>
+							<h3 class="t-op-nextlvl">160</h3>
+							<h3 class="t-op-nextlvl lavel-tag">Published</h3>
+						</div>
+
+						<div class="item1">
+							<h3 class="t-op-nextlvl">Article 65</h3>
+							<h3 class="t-op-nextlvl">1.3k</h3>
+							<h3 class="t-op-nextlvl">220</h3>
+							<h3 class="t-op-nextlvl lavel-tag">Published</h3>
+						</div>
+
+					</div> 
+				</div>
+				<!-END  <div class="col-lg-3 blog-form">-->
+
+					<!-- <div class="box box1">
+						<div class="text">
+							<h2 class="topic-heading">60.5k</h2>
+							<h2 class="topic">Article Views</h2>
+						</div>
+	
+						<img src="https://media.geeksforgeeks.org/wp-content/uploads/20221210184645/Untitled-design-(31).png"
+							alt="Views">
+					</div>
+	
+					<div class="box box2">
+						<div class="text">
+							<h2 class="topic-heading">150</h2>
+							<h2 class="topic">Likes</h2>
+						</div>
+	
+						<img src="https://media.geeksforgeeks.org/wp-content/uploads/20221210185030/14.png" alt="likes">
+					</div>
+	
+					<div class="box box3">
+						<div class="text">
+							<h2 class="topic-heading">320</h2>
+							<h2 class="topic">Comments</h2>
+						</div>
+	
+						<img src="https://media.geeksforgeeks.org/wp-content/uploads/20221210184645/Untitled-design-(32).png"
+							alt="comments">
+					</div>
+	
+					<div class="box box4">
+						<div class="text">
+							<h2 class="topic-heading">70</h2>
+							<h2 class="topic">Published</h2>
+						</div> -->
+	<main>
+		
+	<div class="main">
+
+<div class="box-container">
+
+	 <div class="box box1">
+		
+
+
+		<div class="text">
+		<a href="auto.html" class="topic"> <h1 > <i> Auto  </i>  </h1>
+	</a> 
+			
+		</div>
+
+		
+	</div>
+
+	<div class="box box2">
+		<div class="text">
+		<a href="Security.html" class="topic">  <h1> <i> Security </i> </h1> </a> 
+			
+		</div>
+
+
+	</div>
+
+	<div class="box box3">
+		<div class="text">
+		<a href="AVI.html" class="topic"> <h1> <i> Audio & Visuals </i> </h1> </a>
+		</div>
+
+		
+	</div>
+
+	<div class="box box4">
+		<div class="text">
+		<a href="AC.html" class="topic"><h1> <i> Access Control </i> </h1> </a>
+		
+			
+		</div> 
+	</div>
+
+	<div class="box box5">
+		<div class="text">
+		<a href="Solar.html" class="topic"> <h1> <i> Solar </i> </h1>  </a>
+		
+			
+		</div> 
+	</div>
+
+	<div class="box box6">
+		<div class="text">
+		<a href="fire.html" class="topic"> <h1> <i> Fire </i> </h1>  </a>
+		
+			
+		</div> 
+	</div>
+
+	<div class="box box7">
+		<div class="text">
+		<a href="IT.html" class="topic"><h1> <i> Intrusion Detection </i> </h1> </a>
+		
+			
+		</div> 
+	</div>
 </div>
+</div>
+		<section class="product">
+			<img src="cctv.jpeg" alt="Product 1">
+			<h2>CCTV</h2>
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed imperdiet euismod elit a lacinia.</p>
+			<button>Add to Cart</button>
+		</section>
+		<section class="product">
+			<img src="bio1.jpeg" alt="Product 2">
+			<h2>Fingerprint aunthentication Device</h2>
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed imperdiet euismod elit a lacinia.</p>
+			<button>Add to Cart</button>
+		</section>
 
-<!-- custom js file link  -->
-<script src="js/script.js"></script>
+		<section class="product">
+			<img src="solar.jpeg" alt="Product 3">
+			<h2>Solar Panels</S></h2>
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed imperdiet euismod elit a lacinia.</p>
+			<button>Add to Cart</button>
+			</section>
 
+			<section class="product">
+				<img src="ht.jpeg" alt="Product 4">
+				<h2>Audio And Visual</h2>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed imperdiet euismod elit a lacinia.</p>
+				<button>Add to Cart</button>
+				</section>
+
+				
+			<section class="product">
+				<img src="fd.jpeg" alt="Product 5">
+				<h2>Fire Detection System </h2>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed imperdiet euismod elit a lacinia.</p>
+				<button>Add to Cart</button>
+				</section>
+
+				
+			<section class="product">
+				<img src="door.jpeg" alt="Product 6">
+				<h2>Video Door Phone</h2>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed imperdiet euismod elit a lacinia.</p>
+				<button>Add to Cart</button>
+				</section>
+	</main>
 </body>
 </html>

@@ -1,14 +1,14 @@
 .blogs .box-container
 {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(56rem, 58fr));
-    gap: 8.5rem;
-    background-color: #404040;
+    grid-template-columns: repeat(auto-fit, minmax(40rem, 1fr));
+    gap: 2.5rem;
+   
 }
 
 .blogs .box-container .box
 { 
-    height: 420px;
+    height: 447px;
     width: 380px;
     padding: 20px 35px; 
     background: #191919; 
@@ -58,24 +58,25 @@
 
 .blogs .box-container .box .content p
 {
-    font-size: 1.2rem;
+    font-size: 1.7rem;
     text-align: justify;
-    line-height: 1.6rem;
+    line-height: 2.2rem;
     color: #e96b6b;
-    padding: 0px;
+    padding: 10px;
 }
 
 h1
 {
     color: rgb(243, 239, 239);
     font-size: 34px;
-    margin-top: 12px;
+    margin-top: 22px;
     margin-bottom: -8px;
 }
 
 .title h2 
 {
     color: black; 
+    font-family: 'Times New Roman', Times, serif;
     font-size: 75px;
     width: 1130px;
     margin: 30px auto;

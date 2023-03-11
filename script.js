@@ -50,3 +50,6 @@ function validateEmail(){
     return true;
     }
     
+    function mess(){
+        window.location.href='ty.html';
+       }

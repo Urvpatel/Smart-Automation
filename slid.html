@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="kas.css">
+    <style>
+    .logo {
+        left: 20px;
+    }
+  
+    ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 90px;
+    }
+  
+    li {
+      margin: 0 20px;
+    }
+  
+    a {
+      text-decoration: none;
+      color: black;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+    <nav>
+        <ul>
+        <img src="1.png" height="100px">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <li><a href="#"></a></li>
+          <li><a href="">Products</a></li>
+          <li><a href="client_registration.html">Registration</a></li>
+          <li><a href="login.html">Log-in</a></li>
+          <li><a href="contact.php">Contact</a></li>
+          </ul>
+          </nav>
+    <div class="container">
+        <div class="slider-container active">
+            <div class="slide">
+                <div class="content">
+                    <h3>
+                         Project I
+                    </h3>
+                    <p> 
+                        THE SHRIDHAR HOUSE
+                    </p>
+                    <!-- <a href="#" class="btn">Learn More</a> -->
+                </div>
+                <div class="image">
+                    <img src="house.jpeg" alt="">
+                </div>
+            </div>
+        </div>
+
+        <div class="slider-container">
+            <div class="slide">
+                <div class="content">
+                    <h3>
+                     Project II
+                    </h3>
+                    <p> 
+                        JEETMANYU
+                    </p>
+                    <!-- <a href="#" class="btn">Learn More</a> -->
+                </div>
+                <div class="image">
+                    <img src="jeet.jpeg"  alt="">
+                </div>
+            </div>
+        </div>
+        <div class="slider-container">
+            <div class="slide">
+                <div class="content">
+                    <h3>
+                     Project III
+                    </h3>
+                    <p> 
+                        Kalhar blues
+                    </p>
+                    <!-- <a href="#" class="btn">Learn More</a> -->
+                </div>
+                <div class="image">
+                    <img src="blue.jpeg"  alt="">
+                </div>
+            </div>
+        </div>
+        <div class="slider-container">
+            <div class="slide">
+                <div class="content">
+                    <h3>
+                     Project IV
+                    </h3>
+                    <p> 
+                        Kaveri Sangam 
+                    </p>
+                    <!-- <a href="#" class="btn">Learn More</a> -->
+                </div>
+                <div class="image">
+                    <img src="kaveri sangam.jpeg"  alt="">
+                </div>
+            </div>
+        </div>
+
+        <div class="slider-container">
+            <div class="slide">
+                <div class="content">
+                    <h3>
+                     Project V
+                    </h3>
+                    <p> 
+                        Athens ahmedabad
+                    </p>
+                    <!-- <a href="#" class="btn">Learn More</a> -->
+                </div>
+                <div class="image">
+                    <img src="athens.jpeg"  alt="">
+                </div>
+            </div>
+        </div>
+        
+        <div class="slider-container">
+            <div class="slide">
+                <div class="content">
+                    <h3>
+                                     Project VI
+                                    </h3>
+                                    <p> 
+                                        Kalhar blues and greens
+                                    </p>
+                                    <!-- <a href="#" class="btn">Learn More</a> -->
+                                </div>
+                                <div class="image">
+                                    <img src="kalhar.jpeg"  alt="">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="slider-container">
+                            <div class="slide">
+                                <div class="content">
+                                    <h3>
+                                                     Project VII
+                                                    </h3>
+                                                    <p> 
+                                                        A. SHRIDHAR Corporate house ahmedabad 
+                                                    </p>
+                                                    <!-- <a href="#" class="btn">Learn More</a> -->
+                                                </div>
+                                                <div class="image">
+                                                    <img src="corporate house.jpeg"  alt="">
+                                                </div>
+                                            </div>
+                                        </div>
+
+
+        
+        <div id="prev" onclick="prev()"> < </div>
+        <div id="next" onclick="next()"> > </div>
+    </div>
+    <script>
+        let slides = document.querySelectorAll('.slider-container');
+        let index=0;
+
+        function next(){
+            slides[index].classList.remove('active');
+            index = (index + 1) % slides.length;
+            slides[index].classList.add('active');
+        }
+
+        function prev(){
+            slides[index].classList.remove('active');
+            index = (index - 1 + slides.length ) % slides.length;
+            slides[index].classList.add('active');
+        }
+
+        setInterval(next,3000);
+    </script>
+</body>
+</html>

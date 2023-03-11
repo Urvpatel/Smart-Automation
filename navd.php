@@ -11,19 +11,13 @@
 <body>
     <header>
         <input type ="checkbox" name ="" id ="chk1">
-        <div class="logo"><h1>Web Master</h1></div>
+        <div class="logo"><h1>Smart Automation</h1></div>
             <ul>
                         <li><a href="#">RECENT PROJECTS</a></li>
-                        <li><a href="#">PRODUCTS</a></li>
+                        <li><a href="products.php">PRODUCTS</a></li>
                         <li><a href="Urv.html">REGISTRATION</a></li>
                         <li><a href="login.html">LOGIN</a></li>
-                        <li><a href="contact.html">CONTACT_US</a></li>
-                <li>
-                    <a href="#"><i class="fa fa-facebook"></i></a>
-                    <a href="#"><i class="fa fa-twitter"></i></a>
-                    <a href="#"><i class="fa fa-instagram"></i></a>
-                      
-                </li>
+                        <li><a href="contact.html">CONTACT_US</a></li>  
             </ul>
             <div class="menu">
                 <label for="chk1">
