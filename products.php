@@ -3,65 +3,11 @@
 <head>
 	<title>Product Page</title>
 	<link rel="stylesheet" type="text/css" href="style1.css">
-	
-   
-  
 </head>
 <body>
-  <style>
-    nav {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      background-color: black;
-      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
-      z-index: 999;
-    }
-
-    .logo {
-        left: 20px;
-    }
-  
-    ul {
-      list-style-type: none;
-	  background-color: black;
-      margin: 0;
-      padding: 0;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 90px;
-    }
-  
-    li {
-      margin: 0 20px;
-    }
-  
-    a {
-      text-decoration: none;
-      color: white;
-      font-weight: bold;
-    }
-  </style>
-
-<nav>
-        <ul>
-        <!-- <img src="lv.png" height="100px">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -->
-		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
-        <!-- <li><a href="#">Recent Projects</a></li> -->
-          <!-- <li><a href="products.php">Products</a></li> -->
-		  <li><a href="new.php">Home</a></li>
-		  <li><a href="slid.html">Recent Projects</a></li>
-		  <li><a href="client_registration.html">Registration</a></li>
-          <li><a href="login.html">Log-in</a></li>
-          <li><a href="contact.html">Contact Us</a></li>
-          </ul>
-		</nav>
-		<header><h1> <i> PRODUCTS </i></h1></header>
-
-	<!--  -->
-	<!--  -->
+	<header>
+		<h1> <i> PRODUCTS </i></h1>
+	</header>
 	<h2 class="blog-sidebar-title"></h2>
 	<hr />
 

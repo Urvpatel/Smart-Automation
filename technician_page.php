@@ -1,12 +1,16 @@
 <?php
+require("panel_new.php");
+?>
 
-$conn = mysqli_connect('localhost','root','','pure');
+<?php
+
+$conn = mysqli_connect('localhost','root','','demo');
 
 
 if(isset($_POST['add_product'])){
-
-   $product_name = $_POST['product_name'];
    $tec_id=$_POST['tec_id'];
+   $product_name = $_POST['product_name'];
+  
    $tec_add=$_POST['tec_add'];
    $tec_email=$_POST['tec_email'];
    
@@ -51,7 +55,7 @@ if(isset($_GET['delete'])){
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 
    <!-- custom css file link  -->
-   <link rel="stylesheet" href="admin.css">
+   <link rel="stylesheet" href="stylepn.css">
    <script src="p.js"></script>
 
    <title>SIGN UP</title>
@@ -78,15 +82,15 @@ if(isset($message)){
 
    <div class="admin-product-form-container">
 
-      <form id="form" action="<?php $_SERVER['PHP_SELF'] ?>" method="post" enctype="multipart/form-data">
+      <form action="<?php $_SERVER['PHP_SELF'] ?>" method="post" enctype="multipart/form-data">
          <h3>add a new technician</h3>
          <input type="text" id="username" placeholder="Add Technician Name" name="product_name" class="box">
-         <input type="number" id="username" placeholder="Add Technician Id" name="tec_id" class="box">
+         <input type="text" id="username" placeholder="Add Technician Id" name="tec_id" class="box">
          <input type="text" id="username" placeholder="Add Technician Address" name="tec_add" class="box">
          <input type="email" placeholder="Add Technician Email" name="tec_email" class="box">
          
-         <input type="text" placeholder="Enter Your Phone Number" pattern="[1-9]{1}[0-9]{9}" title="Please enter 10 digit phone number"name="tec_phone" id="contact-phone" onkeyup="validatePhone()" class="box">
-         <span id="phone-error"></span>
+         <input type="number" placeholder="Enter Your Phone Number" name="tec_phone"class="box">
+         
          
          <input type="file" id="file" placeholder="Proof"  onchange="return fileValidation()" name="product_image" class="box">
          

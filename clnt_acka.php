@@ -1,3 +1,6 @@
+<?php 
+require("panel_new.php");
+?>
 <?php
 // require('demo_a.php');
 $conn = mysqli_connect('localhost','root','','demo');
@@ -30,7 +33,7 @@ if(isset($_POST['add_product'])){
 if(isset($_GET['delete'])){
    $id = $_GET['delete'];
    mysqli_query($conn, "DELETE FROM clnt WHERE id = $id");
-   header('location:clnt_acka.php');
+   
 };
 
 ?>
@@ -103,7 +106,7 @@ if(isset($message)){
                                             <td><?php echo $row['Cost'];?></td>
             <td>
                <!-- <a href="admin_update.php?edit=<?php echo $row['Username']; ?>" class="btn"> <i class="fas fa-edit"></i> edit </a> -->
-               <a href="clnt_acka.php?delete=<?php echo $row['id']; ?>" class="btn" name="delete"> <i class="fas fa-trash"></i> delete </a>
+               <a href="clnt_acka.php?delete=<?php echo $row['id']; ?>" class="btn" onclick="return confirm('Are you sure you want to Delete');" name="delete"> <i class="fas fa-trash"></i> delete </a>
             </td>
          </tr>
       <?php } ?>

@@ -1,6 +1,9 @@
+
+
 <?php
 
-@include 'config.php';
+$conn = mysqli_connect('localhost','root','','demo') or die('connection failed');
+
 
 if(isset($_POST['update_update_btn'])){
    $update_value = $_POST['update_quantity'];
@@ -36,7 +39,7 @@ if(isset($_GET['delete_all'])){
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 
    <!-- custom css file link  -->
-   <link rel="stylesheet" href="css/style.css">
+   <link rel="stylesheet" href="crt.css">
 
 </head>
 <body>
@@ -73,7 +76,7 @@ if(isset($_GET['delete_all'])){
          <tr>
             <td><img src="uploaded_img/<?php echo $fetch_cart['image']; ?>" height="100" alt=""></td>
             <td><?php echo $fetch_cart['name']; ?></td>
-            <td>$<?php echo number_format($fetch_cart['price']); ?>/-</td>
+            <td>Rs<?php echo $fetch_cart['price']; ?>/-</td>
             <td>
                <form action="" method="post">
                   <input type="hidden" name="update_quantity_id"  value="<?php echo $fetch_cart['id']; ?>" >
@@ -81,18 +84,18 @@ if(isset($_GET['delete_all'])){
                   <input type="submit" value="update" name="update_update_btn">
                </form>   
             </td>
-            <td>$<?php echo $sub_total = number_format($fetch_cart['price'] * $fetch_cart['quantity']); ?>/-</td>
+            <td>Rs<?php echo $sub_total = $fetch_cart['price'] * $fetch_cart['quantity']; ?>/-</td>
             <td><a href="cart.php?remove=<?php echo $fetch_cart['id']; ?>" onclick="return confirm('remove item from cart?')" class="delete-btn"> <i class="fas fa-trash"></i> remove</a></td>
          </tr>
          <?php
-           $grand_total += $sub_total;  
+         $grand_total += $sub_total;  
             };
          };
          ?>
          <tr class="table-bottom">
-            <td><a href="product.php" class="option-btn" style="margin-top: 0;">continue shopping</a></td>
+            <td><a href="products.php" class="option-btn" style="margin-top: 0;">continue shopping</a></td>
             <td colspan="3">grand total</td>
-            <td>$<?php echo $grand_total; ?>/-</td>
+            <td>Rs<?php echo $grand_total; ?>/-</td>
             <td><a href="cart.php?delete_all" onclick="return confirm('are you sure you want to delete all?');" class="delete-btn"> <i class="fas fa-trash"></i> delete all </a></td>
          </tr>
 
@@ -109,7 +112,7 @@ if(isset($_GET['delete_all'])){
 </div>
    
 <!-- custom js file link  -->
-<script src="js/script.js"></script>
+<script src="script.js"></script>
 
 </body>
 </html>

@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -6,7 +5,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Clnt_reg</title>
-        <link rel="stylesheet" href="newf.css">
+        <link rel="stylesheet" href="client_r.css">
         
    </head>
 <body>
@@ -14,7 +13,7 @@
 
     <div class="admin-product-form-container">
 
-        <form method="post" action="client_reg.php" >
+        <form method="post" action="client_reg.php" onsubmit="return myphn()">
         <h3>Client Registration</h3>
 
         <input type="text" name="F_name" placeholder="First Name" required class="box">
@@ -27,8 +26,8 @@
                     <br>
                     <!DOCTYPE html>
 
-                        <!-- <script>
-                        function toggleTextbox() {
+  <script>
+    function toggleTextbox() {
       // get reference to textbox and checkbox elements
       var textbox = document.getElementById("textbox");
       var checkbox = document.getElementById("checkbox");
@@ -56,17 +55,21 @@
                 </head>
 
                 <label>
-                <input type="checkbox" id="checkbox" onclick="toggleTextbox()" required >
+                <input type="checkbox" id="checkbox" onclick="toggleTextbox()" required class="box">
                  Residential Address
                     </label>
                      <br>
-
                      <input type="text" id="textbox" disabled>
-                     <br>
-                     <input type="checkbox" id="checkbox1" onclick="toggleTextbox1()" required  >office Address
+                     <input type="checkbox" id="checkbox1" onclick="toggleTextbox1()" required class="box">
+                        office Address
                     </label>
-                     <br> -->
-                     <!-- <input type="text" id="textbox1" disabled> -->
+                     <br>
+                     <input type="text" id="textbox1" disabled>
+
+
+
+
+                    
                     <input type="email" name="Email" placeholder="Email" required class="box">
                     <input type="password" name="Password" placeholder="Password" class="box">
                     <br> 
@@ -75,7 +78,7 @@
                            position: relative;
                            right: -15px;
                            font-size: 19px;
-                           color: rgb(0, 0, 0); "> Gender :</label>
+                           color: grey; "> Gender :</label>
 
                            <label style="
                            position: relative;
@@ -95,7 +98,7 @@
                            
                            <input type="radio" name="Gender" class="femalerd" value="Female"required class="box" >
                     <br>
-                    <input type="text" name="Phn_no" placeholder="Contact Number" required class="box">
+                    <input type="text" name="Phn_no" placeholder="Contact Number" required class="box" >
                     <br>
                     <br>
                     <input type="submit" class="btn" name="add_product" value="Submit">
@@ -104,6 +107,6 @@
 
 </div>
 
-
 </body>
 </html>
+<script src="valid.js">

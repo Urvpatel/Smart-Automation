@@ -1,6 +1,6 @@
 <?php
 
-$conn = mysqli_connect('localhost','root','','cart_db');
+$conn = mysqli_connect('localhost','root','','pure');
 
 
 $id = $_GET['edit'];

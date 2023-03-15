@@ -2,7 +2,7 @@ function validate()
 {
     var Name=document.getElementById("nme").value;
     var password=document.getElementById("pas").value;
-    if(Name=="xyz" && password==123)
+    if(Name=="admin" && password=="admin")
     {
         alert("Login Succesfull");
         return false;
@@ -12,7 +12,7 @@ function validate()
         var password=document.getElementById("pas").disabled=true;
         var password=document.getElementById("sub").disabled=true;
         alert("Incorrect USername or Password");
-        window.location="demo2.html";
+        window.location="index.html";
         return false;
     }
 }
