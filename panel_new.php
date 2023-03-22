@@ -25,13 +25,13 @@
         <!-- ============================================================== -->
         <div class="dashboard-header">
             <nav class="navbar navbar-expand-lg bg-white fixed-top">
-                <a class="navbar-brand" href="index.html">Smart Automation</a>
+                <a class="navbar-brand" href="#">Smart Automation</a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse"
                     data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
                     aria-label="Toggle navigation">
                     
                 </button>
-                <a class="dropdown-item" href="index.html"  onclick="return confirm('Are you sure you want to Logout');"><i class="fas fa-power-off mr-2" ></i>Logout</a>
+                <a class="dropdown-item" href="index.html"  onclick="return confirm('Are you sure you want to Logout');"><i class="fas fa-power-off mr-2"></i>Logout</a>
             </nav>
         </div>
         <!-- ============================================================== -->

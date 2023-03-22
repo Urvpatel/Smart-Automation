@@ -55,7 +55,7 @@ if(isset($_GET['delete'])){
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 
    <!-- custom css file link  -->
-   <link rel="stylesheet" href="stylepn.css">
+   <link rel="stylesheet" href="admin.css">
    <script src="p.js"></script>
 
    <title>SIGN UP</title>
