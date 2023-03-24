@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Generation Time: Mar 24, 2023 at 08:01 AM
+-- Generation Time: Mar 24, 2023 at 08:02 AM
 -- Server version: 8.0.31
 -- PHP Version: 8.0.26
 
@@ -18,7 +18,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `demo`
+-- Database: `project`
 --
 
 -- --------------------------------------------------------
@@ -35,27 +35,15 @@ CREATE TABLE IF NOT EXISTS `cart` (
   `image` varchar(255) NOT NULL,
   `quantity` int NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=53 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-
--- --------------------------------------------------------
+) ENGINE=MyISAM AUTO_INCREMENT=54 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Table structure for table `client`
+-- Dumping data for table `cart`
 --
 
-DROP TABLE IF EXISTS `client`;
-CREATE TABLE IF NOT EXISTS `client` (
-  `id` int NOT NULL AUTO_INCREMENT,
-  `firstname` varchar(255) COLLATE utf8mb4_general_ci NOT NULL,
-  `lastname` varchar(255) COLLATE utf8mb4_general_ci NOT NULL,
-  `username` varchar(255) COLLATE utf8mb4_general_ci NOT NULL,
-  `address` varchar(255) COLLATE utf8mb4_general_ci NOT NULL,
-  `email` varchar(255) COLLATE utf8mb4_general_ci NOT NULL,
-  `password` varchar(255) COLLATE utf8mb4_general_ci NOT NULL,
-  `phone` int NOT NULL,
-  `gender` varchar(255) COLLATE utf8mb4_general_ci NOT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=16 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+INSERT INTO `cart` (`id`, `name`, `price`, `image`, `quantity`) VALUES
+(52, 'urv', '100000', 'pexels-sebastiaan-stam-1097456.jpg', 1),
+(53, 'rp sir', '12', 'Hermione Granger😍.jfif', 1);
 
 -- --------------------------------------------------------
 
@@ -65,14 +53,22 @@ CREATE TABLE IF NOT EXISTS `client` (
 
 DROP TABLE IF EXISTS `clnt`;
 CREATE TABLE IF NOT EXISTS `clnt` (
-  `id` int NOT NULL AUTO_INCREMENT,
   `T_id` varchar(20) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
-  `Service_Id` varchar(200) COLLATE utf8mb4_general_ci NOT NULL,
+  `Service_Id` int NOT NULL,
   `Service_date` date NOT NULL,
-  `Feedback` varchar(200) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
-  `Cost` int NOT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=21 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+  `Feedback` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
+  `Cost` int NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `clnt`
+--
+
+INSERT INTO `clnt` (`T_id`, `Service_Id`, `Service_date`, `Feedback`, `Cost`) VALUES
+('t1', 24353456, '2023-02-23', 'erdfghfdstyuiolkjhgfdsawertyuikjhdsaqwertyuhjgfd', 3456),
+('T_id', 456789, '4444-03-31', 'rtyuioplkjhygtfretyuiop[poiuytrtyuiop', 555),
+('T_id', 359304, '2322-12-20', 'its amazing', 250),
+('T_id', 0, '6767-07-06', 'ygugugyu', 32);
 
 -- --------------------------------------------------------
 
@@ -82,18 +78,28 @@ CREATE TABLE IF NOT EXISTS `clnt` (
 
 DROP TABLE IF EXISTS `clnt_reg`;
 CREATE TABLE IF NOT EXISTS `clnt_reg` (
-  `id` int NOT NULL AUTO_INCREMENT,
-  `F_name` varchar(200) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
-  `L_name` varchar(200) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
-  `Username` varchar(200) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
-  `Address_1` varchar(200) COLLATE utf8mb4_general_ci NOT NULL,
-  `Email` varchar(200) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
-  `Password` varchar(200) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
-  `Gender` varchar(10) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
+  `F_name` varchar(20) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
+  `L_name` varchar(20) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
+  `Username` varchar(20) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
+  `Address_1` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
+  `Email` varchar(15) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
+  `Password` varchar(10) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
+  `Gender` varchar(5) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
   `Phn_no` int NOT NULL,
-  PRIMARY KEY (`id`),
+  PRIMARY KEY (`Username`),
   UNIQUE KEY `Phn_no` (`Phn_no`)
-) ENGINE=InnoDB AUTO_INCREMENT=30 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `clnt_reg`
+--
+
+INSERT INTO `clnt_reg` (`F_name`, `L_name`, `Username`, `Address_1`, `Email`, `Password`, `Gender`, `Phn_no`) VALUES
+('rtyuio', 'rtyuio', '5r6ty7iuop', 'retyuio', 'ert@mail.com', '3wert456', 'Femal', 345678),
+('arya', 'bhavsar', 'arya18', 'a-4 yash flat', 'arya@gmail.com', '12345', 'Male', 2147483647),
+('ertyuio', 'ertyui', 'ertyui', 'ertyui', 'ertyui@gamil.co', 'fghjkl;', 'Femal', 3456789),
+('URV', 'PATEL', 'urvurvurv', 'yuyuy', 'urv@gmail.com', '3456789', 'Male', 1234567890),
+('[drtyhujl]', '[]', '[rtyguhi]', '[rtyuio]', '[erty@gmail.com', '[tdyuio67]', '[Male', 0);
 
 -- --------------------------------------------------------
 
@@ -142,7 +148,7 @@ INSERT INTO `order` (`id`, `name`, `number`, `email`, `method`, `flat`, `street`
 (12, 'urv', 1234567890, 'urvpatelhitack313@gmail.com', 'paypal', 'gfcgfc', 'fgcfgc', 'fgcfgc', 'gfcgc', 'gfcgcf', 12345, 'rytrfytf (1) , urv (1) ', '133'),
 (13, 'urv', 1234567890, 'surrjune3@netxansh.media', 'paypal', 'ghfhfgh', 'uygug', 'ahm', 'jgh', 'ind', 123456, 'arya (2) , urv (3) ', '340000'),
 (14, 'YTF', 1234567890, 'urvpatelhitack313@gmail.com', 'paypal', 'tyguyg', 'uygug', 'trdtrdtrd', 'ghhgcvhv', 'yugug', 123456, 'urv (1) ', '100000'),
-(15, 'urv', 12387342, 'urvpatelhitack313@gmail.com', 'credit cart', 'ghfhfgh', 'tdrtrdtrd', 'uyguyg', 'uyguyg', 'yugug', 12345, 'urv (1) ', '100000');
+(15, 'rajdeep', 1234567890, 'rajdeep@gmail.com', 'credit cart', 'tyguyg', 'wdsasd', 'ahm', 'uygug', 'trdtrd', 12345, 'urv (1) , rp sir (1) ', '100012');
 
 -- --------------------------------------------------------
 
@@ -157,14 +163,14 @@ CREATE TABLE IF NOT EXISTS `product` (
   `price` varchar(2000) NOT NULL,
   `image` varchar(255) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=66 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=67 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `product`
 --
 
 INSERT INTO `product` (`id`, `name`, `price`, `image`) VALUES
-(65, 'arya', '20', 'bio1.jpeg'),
+(65, 'arya', '20000', 'new.png'),
 (64, 'urv', '100000', 'pexels-sebastiaan-stam-1097456.jpg');
 
 -- --------------------------------------------------------
@@ -182,7 +188,15 @@ CREATE TABLE IF NOT EXISTS `service_book` (
   `dt_book` date NOT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `U_name` (`U_name`)
-) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `service_book`
+--
+
+INSERT INTO `service_book` (`id`, `U_name`, `Confirm_Address`, `Issue_text`, `dt_book`) VALUES
+(1, '', '', '', '0000-00-00'),
+(5, 'urv', 'fudguswyfg', 'uguguy', '0001-01-01');
 
 -- --------------------------------------------------------
 
@@ -212,23 +226,6 @@ INSERT INTO `tech` (`T_id`, `name`, `T_address`, `T_email`, `cn_no`, `password`,
 ('qwerthyjuki', 'qaswgfrhy', 'qagtfrhyjuki', '', 12345678, 'wdefrghy', 0),
 ('t1', 'ARYA', 'SDSFFW', 'astd@gamil.com', 132454, '1w312', 0),
 ('[tydfg]', '[dfgh]', '[]', '[rtf@gmail.com]', 0, '[esdrtfygu', 0);
-
--- --------------------------------------------------------
-
---
--- Table structure for table `technician`
---
-
-DROP TABLE IF EXISTS `technician`;
-CREATE TABLE IF NOT EXISTS `technician` (
-  `id` int NOT NULL AUTO_INCREMENT,
-  `name` varchar(255) COLLATE utf8mb4_general_ci NOT NULL,
-  `address` varchar(255) COLLATE utf8mb4_general_ci NOT NULL,
-  `email` varchar(255) COLLATE utf8mb4_general_ci NOT NULL,
-  `phone` int NOT NULL,
-  `image` varchar(255) COLLATE utf8mb4_general_ci NOT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=112 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

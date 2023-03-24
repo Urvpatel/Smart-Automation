@@ -43,7 +43,7 @@
         <div class="nav-left-sidebar sidebar-dark">
             <div class="menu-list">
                 <nav class="navbar navbar-expand-lg navbar-light">
-                    <a class="d-xl-none d-lg-none" href="#">Dashboard</a>
+                    <a class="d-xl-none d-lg-none" href="dash.php">Dashboard</a>
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
                         aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
@@ -54,21 +54,21 @@
                                 Menu
                             </li>
                             <li class="nav-item ">
-                                <a class="nav-link active" href="#" data-toggle="collapse" aria-expanded="false"
+                                <a class="nav-link active" href="dash.php" data-toggle="collapse" aria-expanded="false"
                                     data-target="#submenu-1" aria-controls="submenu-1"><i
                                         class="fa fa-fw fa-user-circle"></i>Dashboard <span
                                         class="badge badge-success">6</span></a>
-                                <!-- <div id="submenu-1" class="collapse submenu" style="">
+                                <div id="submenu-1" class="collapse submenu" style="">
                                     <ul class="nav flex-column">
                                         <li class="nav-item">
-                                            <a class="nav-link" href="#">REPORT-1</a>
+                                            <a class="nav-link" href="dash.php">Deshboard</a>
                                         </li>
-                                        <li class="nav-item">
+                                        <!-- <li class="nav-item">
                                             <a class="nav-link" href="#">REPORT-2</a>
-                                        </li>
+                                        </li> -->
             
                                     </ul>
-                                </div> -->
+                                </div> 
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="#" data-toggle="collapse" aria-expanded="false"
@@ -104,7 +104,7 @@
                             <li class="nav-item ">
                                 <a class="nav-link" href="#" data-toggle="collapse" aria-expanded="false"
                                     data-target="#submenu-4" aria-controls="submenu-4"><i
-                                        class="fab fa-fw fa-wpforms"></i>SUPPLIER</a>
+                                        class="fab fa-fw fa-wpforms"></i>PRODUCTS</a>
                                 <div id="submenu-4" class="collapse submenu" style="">
                                     <ul class="nav flex-column">
                                         <li class="nav-item">
@@ -125,12 +125,12 @@
                                         <li class="nav-item">
                                             <a class="nav-link" href="technician_page.php">ADD TECHNICIAN</a>
                                         </li>
-                                            <!-- <li class="nav-item">
+                                             <!-- <li class="nav-item">
                                                 <a class="nav-link" href="#"> ACKNOWLEDGEMENT</a>
-                                            </li>
-                                            <li class="nav-item">
-                                                <a class="nav-link" href="#"> DETAILS</a>
                                             </li> -->
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="tech_a.php"> DETAILS</a>
+                                            </li>
                                     </ul>
                                 </div>
                             </li>

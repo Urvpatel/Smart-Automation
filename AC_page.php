@@ -1,4 +1,4 @@
-<?php 
+<?php
 require("panel_new.php");
 ?>
 
@@ -33,8 +33,8 @@ if(isset($_POST['add_product'])){
 
 if(isset($_GET['delete'])){
    $id = $_GET['delete'];
-   mysqli_query($conn, "DELETE FROM auto WHERE id = $id");
-
+   mysqli_query($conn, "DELETE FROM acescont WHERE id = $id");
+   header('location:AC_page.php');
 };
 
 ?>
@@ -76,14 +76,12 @@ if(isset($message)){
          <h3>add a new product</h3>
          <select id="myList" class="box">
 									<option value="">Add Products</option>
-									<option value="admin_page.php">Add Product To Home Page </option>
+									
 									<option value="auto_page.php">Auto Products</option>
 									<option value="audio_page.php">Audio Products</option>
 									<option value="solar_page.php">Solar Products</option>
 									<option value="security_page.php">Security Products</option>
 									<option value="AC_page.php">Access Controls Products</option>
-                           <option value="fire_page.php">Fire Detection Products</option>
-                           <option value="IT_page.php">Intrusion Detection Products</option>
 								  </select>
 								  <script>
 								 function redirectToSelectedPage() {
@@ -125,7 +123,7 @@ if(isset($message)){
             <td><?php echo $row['price']; ?> Rs/-</td>
             <td><?php echo $row['quantity']; ?></td>
             <td>
-               <a href="admin_update.php?edit=<?php echo $row['id']; ?>" class="btn"> <i class="fas fa-edit"></i> edit </a>
+               <a href="AC_update.php?edit=<?php echo $row['id']; ?>" class="btn"> <i class="fas fa-edit"></i> edit </a>
                <a href="AC_page.php?delete=<?php echo $row['id']; ?>" class="btn" onclick="return confirm('Are you sure you want to delete');"> <i class="fas fa-trash"></i> delete </a>
             
             </td>

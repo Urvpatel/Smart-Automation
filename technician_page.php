@@ -2,6 +2,7 @@
 require("panel_new.php");
 ?>
 
+
 <?php
 
 $conn = mysqli_connect('localhost','root','','demo');
@@ -37,7 +38,6 @@ if(isset($_POST['add_product'])){
 if(isset($_GET['delete'])){
    $id = $_GET['delete'];
    mysqli_query($conn, "DELETE FROM technician WHERE id = $id");
-   header('location:technician_page.php');
 };
 
 ?>

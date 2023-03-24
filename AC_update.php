@@ -23,7 +23,7 @@ if(isset($_POST['update_product'])){
 
       if($upload){
          move_uploaded_file($product_image_tmp_name, $product_image_folder);
-         header('location:AC_page.php');
+
       }else{
          $$message[] = 'please fill out all!'; 
       }

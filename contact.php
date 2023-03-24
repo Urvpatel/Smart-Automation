@@ -21,7 +21,7 @@
             <h1>Get In Touch</h1>
             <p>Call Or Email Us Regarding Question Or Issues</p>
         </div>
-        <form  action="https://formspree.io/f/mbjekjvl" method="POST">
+        <form  action="" method="POST">
         <div class="form">
             <input type="text" placeholder="Your Name" name="name" required>
             <input type="email" placeholder="Email" name="email" required>
@@ -36,6 +36,37 @@
         </div>
     </section>
     </div>
+    <?php
+
+    $name = $_POST['name'];
+    $email = $_POST['email'];
+    $msg = $_POST['message'];
+
+//
+// *** To Email ***
+$to = 'p2610prachi@gmail.com';
+//
+// *** Subject Email ***
+$subject = 'Contact Us Mail';
+//
+// *** Content Email ***
+$template=file_get_contents('./EmailTemplate.php');
+$template = str_replace('{Name}',$name,$template);
+$template = str_replace('{Email}',$email,$template);
+$template = str_replace('{MSG}',$msg,$template);
+
+
+
+$headers = 'From: smartautomation7093@gmail.com' . "\r\n" .
+'Reply-To: smartautomation7093@gmail.com' . "\r\n" .
+'Content-type: text/html; charset=UTF-8' . "\r\n" .
+'X-Mailer: PHP/' . phpversion();
+//
+//*** Show the result... ***
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+mail($to, $subject, $template, $headers);
+}
+?>
 </body>
 </html>
 

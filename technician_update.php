@@ -1,6 +1,5 @@
 <?php
-
-$conn = mysqli_connect('localhost','root','','pure');
+$conn = mysqli_connect('localhost','root','','demo');
 
 
 $id = $_GET['edit'];

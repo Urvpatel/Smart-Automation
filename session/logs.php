@@ -7,8 +7,7 @@ $Password=$_POST["Password"];
 session_start();
 if(isset($_SESSION['Username']))
 {
-    echo "<h1>hello</h1>";
-    // echo"<a href='demo_a.php'></a>";
+    echo "<h1>hello</h1>";  
     ?>
     <script>
     window.location.href='home_c.php'

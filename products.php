@@ -1,3 +1,6 @@
+<?php
+require("panel_new.php");
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -147,7 +150,7 @@
 
 
 		<div class="text">
-		<a href="auto.html" class="topic"> <h1 > <i> Auto  </i>  </h1>
+		<a href="autoweb.php" class="topic"> <h1 > <i> Auto  </i>  </h1>
 	</a> 
 			
 		</div>
@@ -157,7 +160,7 @@
 
 	<div class="box box2">
 		<div class="text">
-		<a href="Security.html" class="topic">  <h1> <i> Security </i> </h1> </a> 
+		<a href="Security.php" class="topic">  <h1> <i> Security </i> </h1> </a> 
 			
 		</div>
 
@@ -166,7 +169,7 @@
 
 	<div class="box box3">
 		<div class="text">
-		<a href="AVI.html" class="topic"> <h1> <i> Audio & Visuals </i> </h1> </a>
+		<a href="AVI.php" class="topic"> <h1> <i> Audio & Visuals </i> </h1> </a>
 		</div>
 
 		
@@ -174,7 +177,7 @@
 
 	<div class="box box4">
 		<div class="text">
-		<a href="AC.html" class="topic"><h1> <i> Access Control </i> </h1> </a>
+		<a href="AC.php" class="topic"><h1> <i> Access Control </i> </h1> </a>
 		
 			
 		</div> 
@@ -182,7 +185,7 @@
 
 	<div class="box box5">
 		<div class="text">
-		<a href="Solar.html" class="topic"> <h1> <i> Solar </i> </h1>  </a>
+		<a href="Solar.php" class="topic"> <h1> <i> Solar </i> </h1>  </a>
 		
 			
 		</div> 
@@ -190,7 +193,7 @@
 
 	<div class="box box6">
 		<div class="text">
-		<a href="fire.html" class="topic"> <h1> <i> Fire </i> </h1>  </a>
+		<a href="fire.php" class="topic"> <h1> <i> Fire </i> </h1>  </a>
 		
 			
 		</div> 
@@ -198,7 +201,7 @@
 
 	<div class="box box7">
 		<div class="text">
-		<a href="IT.html" class="topic"><h1> <i> Intrusion Detection </i> </h1> </a>
+		<a href="IT.php" class="topic"><h1> <i> Intrusion Detection </i> </h1> </a>
 		
 			
 		</div> 

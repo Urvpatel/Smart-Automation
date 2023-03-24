@@ -8,21 +8,23 @@ $conn = mysqli_connect('localhost','root','','demo');
 
 if(isset($_POST['add_client'])){
 
-   $client_fname = $_POST['client_fname'];
-   $client_lname = $_POST['client_lname'];
-   $usrnme=$_POST['usrnme'];
-   $addr=$_POST['addr'];
-   $eml=$_POST['eml'];
-   $pswd=$_POST['pswd'];
-   $clnt_phone=$_POST['clnt_phone'];
-  $gender=$_POST['gender'];
+   $F_name = $_POST['F_name'];
+   $L_name = $_POST['L_name'];
+   $Username=$_POST['Username'];
+   $Address_1=$_POST['Address_1'];
+   $Email=$_POST['Email'];
+   $Password=$_POST['Password'];
+   $Phn_no=$_POST['Phn_no'];
+  $Gender=$_POST['Gender'];
 
-   if(empty($client_fname) || empty($client_lname) || empty($usrnme) || empty($addr) || empty($eml) || empty($pswd) || empty($gender) || empty($clnt_phone)){
+   if(empty($F_name) || empty($L_name) || empty($Username) || empty($Address_1) || empty($Email) || empty($Password) || empty($Gender) || empty($Phn_no)){
       $message[] = 'please fill out all';
 
    }else{
-      $insert = "INSERT INTO client(firstname, lastname, username, address,email,password,phone,gender) VALUES('$client_fname', '$client_lname', '$usrnme', '$addr','$eml','$pswd','$clnt_phone','$gender')";
-      $upload = mysqli_query($conn,$insert);
+      // $insert = "INSERT INTO client(firstname, lastname, username, address,email,password,phone,gender) VALUES('$client_fname', '$client_lname', '$usrnme', '$addr','$eml','$pswd','$clnt_phone','$gender')";
+      $query= "INSERT INTO clnt_reg (`F_name`, `L_name`, `Username`, `Address_1`, `Email`, `Password`, `Gender`, `Phn_no`) VALUES ('$F_name',
+'$L_name','$Username','$Address_1','$Email','$Password','$Gender','$Phn_no')";
+      $upload = mysqli_query($conn,$query);
      
       if($upload==true){
         
@@ -37,8 +39,8 @@ if(isset($_POST['add_client'])){
 
 if(isset($_GET['delete'])){
    $id = $_GET['delete'];
-   mysqli_query($conn, "DELETE FROM client WHERE id = $id");
-   header('location:client_page.php');
+   mysqli_query($conn, "DELETE FROM clnt_reg WHERE id = $id");
+  
 };
 
 ?>
@@ -80,15 +82,15 @@ if(isset($message)){
          <h3>add a new Client</h3>
         
 					
-         <input type="text" id="username" placeholder="enter client First Name" name="client_fname" class="box">
-         <input type="text" id="username" placeholder="enter client Last Name" name="client_lname" class="box">
-         <input type="text" id="username" placeholder="enter client Username" name="usrnme" class="box">
-         <input type="text" id="username" placeholder="Address" name="addr" class="box">
-         <input type="email" id="username" placeholder="Email" name="eml" class="box">
-         Male<input type="radio" name="gender" id="malerd" value="Male"required class="box">
-         Female<input type="radio" name="gender" id="malerd" value="Female"required class="box">
-         <input type="text" id="username" placeholder="Password" name="pswd" class="box">
-         <input type="text" placeholder="Enter Your Phone Number" pattern="[0-9]{1}[0-9]{9}" title="Please enter 10 digit phone number"name="clnt_phone" id="contact-phone" onkeyup="validatePhone()" class="box">
+         <input type="text" id="username" placeholder="enter client First Name" name="F_name" class="box">
+         <input type="text" id="username" placeholder="enter client Last Name" name="L_name" class="box">
+         <input type="text" id="username" placeholder="enter client Username" name="Username" class="box">
+         <input type="text" id="username" placeholder="Address" name="Address_1" class="box">
+         <input type="email" id="username" placeholder="Email" name="Email" class="box">
+         Male<input type="radio" name="Gender" id="malerd" value="Male"required class="box">
+         Female<input type="radio" name="Gender" id="malerd" value="Female"required class="box">
+         <input type="text" id="username" placeholder="Password" name="Password" class="box">
+         <input type="text" placeholder="Enter Your Phone Number" pattern="[0-9]{1}[0-9]{9}" title="Please enter 10 digit phone number"name="Phn_no" id="contact-phone" onkeyup="validatePhone()" class="box">
          <span id="phone-error"></span>
         
          
@@ -101,7 +103,7 @@ if(isset($message)){
 
    <?php
 
-   $select = mysqli_query($conn, "SELECT * FROM client");
+   $select = mysqli_query($conn, "SELECT * FROM clnt_reg");
    
    ?>
    <div class="product-display">
@@ -122,14 +124,14 @@ if(isset($message)){
          <?php while($row = mysqli_fetch_assoc($select)){ ?>
          <tr>
            
-            <td><?php echo $row['firstname']; ?></td>
-            <td><?php echo $row['lastname']; ?></td>
-            <td><?php echo $row['username']; ?></td>
-            <td><?php echo $row['address']; ?></td>
-            <td><?php echo $row['email']; ?></td>
-            <td><?php echo $row['password']; ?></td>
-            <td><?php echo $row['phone']; ?></td>
-            <td><?php echo $row['gender']; ?></td>
+            <td><?php echo $row['F_name']; ?></td>
+            <td><?php echo $row['L_name']; ?></td>
+            <td><?php echo $row['Username']; ?></td>
+            <td><?php echo $row['Address_1']; ?></td>
+            <td><?php echo $row['Email']; ?></td>
+            <td><?php echo $row['Password']; ?></td>
+            <td><?php echo $row['Phn_no']; ?></td>
+            <td><?php echo $row['Gender']; ?></td>
             
             <td>
                <a href="client_update.php?edit=<?php echo $row['id']; ?>" class="btn"> <i class="fas fa-edit"></i> edit </a>
